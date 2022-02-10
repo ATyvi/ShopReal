@@ -33,11 +33,11 @@ namespace Shop.ApplicationServices.Services
                 result.EndEpochDate = headlineInfo.EndEpochDate;
                 result.MobileLink = headlineInfo.MobileLink;
                 result.Link = headlineInfo.Link;
-                result.DailyForecastsDate = headlineInfo.Date;
-                result.DailyForecastsEpochDate = headlineInfo.EpochDate;
-                result.TempMinValue = headlineInfo.Temperature.Minimum.Value;
-                result.TempMinUnit = headlineInfo.Temperature.Minimum.Unit;
-                result.TempMinUnitType = headlineInfo.Temperature.Mininum.UnitType;
+                result.DailyForecastsDate = weatherInfo.Date;
+                result.DailyForecastsEpochDate = weatherInfo.EpochDate;
+                result.TempMinValue = weatherInfo.Temperature.Minimum.Value;
+                result.TempMinUnit = weatherInfo.Temperature.Minimum.Unit;
+                result.TempMinUnitType = weatherInfo.Temperature.Minimum.UnitType;
 
                 var jsonString = new JavaScriptSerializer().Serialize(result);
 
